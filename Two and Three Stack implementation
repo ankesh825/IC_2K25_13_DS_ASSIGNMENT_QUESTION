@@ -1,0 +1,224 @@
+//Two stack implementation with array
+
+#define max 10
+int stack[max];
+
+//intitialization
+s1[0];
+s2[0]=max-1;
+
+push1(stack,newel)
+s1[0]<-s1[0]+1;
+s1[s1[0]]<-newel;
+
+push2(stack,newel)
+s2[0]<-s2[0]-1;
+s2[s2[0]]<-newel;
+
+is full stack-> s1[0]+1==s2[0]? return(1)
+
+Iaempty stack1=>(s1[0]==0)? :return(1);
+
+Iaempty stack2=>(s2[0]==max-1)? :return(1);
+
+int pop1(stack)
+{ int delel=-9999;
+if( s1[0]==0)
+print("Underflow---\n");
+else
+{ delel=s1[s1[0]];
+s1[0]=s1[0]-1
+}
+return(delel);
+}
+
+int pop2(stack)
+{ int delel=-9999;
+if( s2[0]==max-1)
+print("Underflow---\n");
+else
+{ delel=s2[s2[0]];
+s2[0]=s2[0]+1
+}
+return(delel);
+}
+
+void dispstack1(stack type s
+{ int i
+if (s1[0]==0)
+print("Stack 1 is empty\n");
+else
+for(i=s1[0];i>=1;i--)
+print("\n%d\n",s1[i]);
+getch()
+}
+
+void dispstack2(stack type s
+{ int i
+if (s2[0]==max-1)
+print("Stack 2 is empty\n");
+else
+for(i=s2[0];i<=max-2;i++)
+print("\n%d\n",s2[i]);
+getch()
+}
+
+
+
+// original way s[0]=top
+
+
+
+#define max 10
+int stack[max];
+int top1=-1,top2=max;
+
+//intitialization
+
+push1(stack,newel)
+if(top1+1==top2) return(0);
+top1<-top1+1;
+stack[top1]<-newel;
+
+push2(stack,newel)
+if(top1+1==top2) return(0);
+top2<-top2-1;
+stack[top2]<-newel;
+
+is full stack-> top1+1==top2? return(1)
+
+Iaempty stack1=>(top1==-1)? :return(1);
+Iaempty stack2=>(top2==max)? :return(1);
+
+int pop1(stack)
+{ int delel=-9999;
+if(top1==-1)
+print("Underflow---\n");
+else
+{ delel=stack[top1];
+top1=top1-1;
+}
+return(delel);
+}
+
+int pop2(stack)
+{ int delel=-9999;
+if(top2==max)
+print("Underflow---\n");
+else
+{ delel=stack[top2];
+top2=top2+1;
+}
+return(delel);
+}
+
+void dispstack1(stack type s)
+{ int i;
+if(top1==-1)
+print("Stack 1 is empty\n");
+else
+for(i=top1;i>=0;i--)
+print("\n%d\n",stack[i]);
+}
+
+void dispstack2(stack type s)
+{ int i;
+if(top2==max)
+print("Stack 2 is empty\n");
+else
+for(i=top2;i<max;i++)
+print("\n%d\n",stack[i]);
+}
+
+
+
+
+
+// Three stack ka liya 
+//intitialization
+s1[0];
+s2[0]=6;
+s3[0]=max-1;
+
+push1(stack,newel)
+s1[0]<-s1[0]+1;
+s1[s1[0]]<-newel;
+
+push2(stack,newel)
+s2[0]<-s2[0]+1;
+s2[s2[0]]<-newel;
+
+push3(stack,newel)
+s3[0]<-s3[0]-1;
+s3[s3[0]]<-newel;
+
+is full stack-> s1[0]+1==s2[0] OR s2[0]+1==s3[0]? return(1)
+
+Iaempty stack1=>(s1[0]==0)? :return(1);
+
+Iaempty stack2=>(s2[0]==6)? :return(1);
+
+Iaempty stack3=>(s3[0]==max-1)? :return(1);
+
+int pop1(stack)
+{ int delel=-9999;
+if( s1[0]==0)
+print("Underflow---\n");
+else
+{ delel=s1[s1[0]];
+s1[0]=s1[0]-1
+}
+return(delel);
+}
+
+int pop2(stack)
+{ int delel=-9999;
+if( s2[0]==6)
+print("Underflow---\n");
+else
+{ delel=s2[s2[0]];
+s2[0]=s2[0]-1
+}
+return(delel);
+}
+
+int pop3(stack)
+{ int delel=-9999;
+if( s3[0]==max-1)
+print("Underflow---\n");
+else
+{ delel=s3[s3[0]];
+s3[0]=s3[0]+1
+}
+return(delel);
+}
+
+void dispstack1(stack type s
+{ int i
+if (s1[0]==0)
+print("Stack 1 is empty\n");
+else
+for(i=s1[0];i>=1;i--)
+print("\n%d\n",s1[i]);
+getch()
+}
+
+void dispstack2(stack type s
+{ int i
+if (s2[0]==6)
+print("Stack 2 is empty\n");
+else
+for(i=s2[0];i>=1;i--)
+print("\n%d\n",s2[i]);
+getch()
+}
+
+void dispstack3(stack type s
+{ int i
+if (s3[0]==max-1)
+print("Stack 3 is empty\n");
+else
+for(i=s3[0];i<=max-2;i++)
+print("\n%d\n",s3[i]);
+getch()
+}
